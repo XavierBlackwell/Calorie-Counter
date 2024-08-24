@@ -7,81 +7,129 @@
     --light-pink: #ffadad;
     --dark-red: #850000;
     --light-green: #acd157;
-  }
-  
-  body {
+}
+
+body {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     font-size: 18px;
     background-color: var(--fcc-blue);
     color: var(--light-grey);
-  }
-  
-  h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
     text-align: center;
-  }
-  
-  .container {
+}
+
+.container {
     width: 90%;
     max-width: 680px;
-  }
-  
-  h1,
-  .container,
-  .output {
     margin: 20px auto;
-  }
-  
-  label,
-  legend {
+    padding: 20px;
+}
+
+label,
+legend {
     font-weight: bold;
-  }
-  
-  .input-container {
+}
+
+.input-container {
     display: flex;
     flex-direction: column;
-  }
-  
-  button {
+}
+
+button {
     cursor: pointer;
     text-decoration: none;
     background-color: var(--light-yellow);
     border: 2px solid var(--dark-yellow);
-  }
-  
-  button,
-  input,
-  select {
     min-height: 24px;
     color: var(--dark-blue);
-  }
-  
-  fieldset,
-  label,
-  button,
-  input,
-  select {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input,
+select {
+    min-height: 24px;
+    color: var(--dark-blue);
+    font-size: 1rem;
+}
+
+fieldset,
+label,
+button,
+input,
+select {
     margin-bottom: 10px;
-  }
-  
-  .output {
+}
+
+.output {
     border: 2px solid var(--light-grey);
     padding: 10px;
     text-align: center;
-  }
-  
-  .hide {
+}
+
+.hide {
     display: none;
-  }
-  
-  .output span {
+}
+
+.output span {
     font-weight: bold;
     font-size: 1.2em;
-  }
-  
-  .surplus {
+}
+
+.surplus {
     color: var(--light-pink);
-  }
-  
-  .deficit {
+}
+
+.deficit {
     color: var(--light-green);
-  }
+}
+
+/* Responsive Styles */
+
+/* Devices with a screen width of 768px or less (tablets and smaller devices) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    button,
+    input,
+    select {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* Devices with a screen width of 480px or less (small devices) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    button,
+    input,
+    select {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.flex-item {
+    flex: 1 1 200px;
+}
+
+@media (max-width: 768px) {
+    .flex-item {
+        flex: 1 1 100%;
+    }
+}
