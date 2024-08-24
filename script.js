@@ -98,7 +98,6 @@ function clearForm() {
 
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
-const clearButton = document.querySelector('#clearButton');
 
-// Add an event listener to call clearForm when the button is clicked
+// Correctly select the button by its id
 clearButton.addEventListener('click', clearForm);
